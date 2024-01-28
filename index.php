@@ -32,7 +32,7 @@
 
 <?php
 
-  $conexion = mysqli_connect();
+  $conexion = mysqli_connect("db", "root", "test", "emergencias");
 
   if (!isset($_POST['action'])) {
     $_POST['action'] = "";
