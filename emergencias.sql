@@ -1,7 +1,7 @@
 CREATE DATABASE emergencias;
 
 CREATE TABLE usuario (
-    dni varchar(15) NOT NULL,
+    dni varchar(15) NOT NULL PRIMARY KEY,
     nombre varchar(45) NOT NULL,
     apellido varchar(45) NOT NULL,
     emergencia varchar(255), 

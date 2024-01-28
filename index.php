@@ -32,14 +32,15 @@
 
 <?php
 
-  $conexion = mysqli_connect("XXXX", "XXXXXX", "XXXXXXXX", "XXXXXXXXXX");
+  $conexion = mysqli_connect();
 
   if (!isset($_POST['action'])) {
     $_POST['action'] = "";
   }
 
   if ($_POST["action"] == "eliminar") {
-    $borra = "DELETE FROM usuario WHERE dni=" . $_POST['dni'] . "";
+    $dniABorrar = $_POST['dni'];
+    $borra = "DELETE FROM usuario WHERE dni= '$dniABorrar'";
     mysqli_query($conexion, $borra);
   }
 
